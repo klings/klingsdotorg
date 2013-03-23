@@ -1,0 +1,22 @@
+﻿@model dynamic
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        @if (!Request.Url.Host.Equals("www.klings.org"))
+        {
+            <meta name="robots" content="noindex,nofollow"/>
+        }
+        <title>André N. Klingsheim</title>
+    </head>
+    <body>
+        <div>
+              Hello world!
+        </div>
+    </body>
+</html>
