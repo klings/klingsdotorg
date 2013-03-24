@@ -1,4 +1,5 @@
-﻿@model dynamic
+﻿@using System.Web.Optimization
+@model dynamic
 
 @{
     Layout = null;
@@ -7,16 +8,95 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        @if (!Request.Url.Host.Equals("www.klings.org"))
-        {
-            <meta name="robots" content="noindex,nofollow"/>
-        }
-        <title>André N. Klingsheim</title>
-    </head>
-    <body>
-        <div>
-              Hello world!
+<head>
+    @Styles.Render("~/Content/bootstrap")
+    @if (!Request.Url.Host.Equals("www.klings.org"))
+    {
+        <meta name="robots" content="noindex,nofollow" />
+    }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>André N. Klingsheim</title>
+</head>
+<body style="padding: 60px">
+    <div class="container">
+
+        <div class="navbar navbar-fixed-top navbar-inverse">
+            <div class="navbar-inner">
+                <div class="container">
+                    <ul class="nav">
+                        <li class="active"><a href="#Home">Home</a></li>
+                        <li><a href="#Projects">Projects</a></li>
+                        <li><a href="#">Bio</a></li>
+                        <li><a href="#">Research</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </body>
+        <!-- /.navbar -->
+    </div>
+    <div id="Home" class="row-fluid">
+        <div class="span9">
+            <div class="hero-unit">
+            <h1>André N. Klingsheim</h1>
+            For those wondering what I've been up to lately.    
+            </div>
+            <div>
+                <p>
+                    The last couple of years I've been working in the financial sector as a security architect, mostly concerned with
+                    development of ASP.NET applications.
+                </p>
+                <p>
+                    To keep an eye on what I'm up to these days, you'll probably want to find me on Twitter: <a href="https://twitter.com/klingsen">@@klingsen</a>.
+                </p>
+                <p>
+                    I'll occasionally post something to my blog, here's my last few ramblings:
+                </p>
+                <div class="well">
+                    <script src="http://feeds.feedburner.com/ThedotNetNoob?format=sigpro" type="text/javascript"></script>
+                <noscript>
+                    <p>
+                        Subscribe to RSS headline updates from: <a href="http://feeds.feedburner.com/ThedotNetNoob"></a>
+                        <br />
+                        Powered by FeedBurner
+                    </p>
+                </noscript>
+                </div>
+            </div>
+        </div>
+        <div class="span3 hidden-phone">
+            <a class="twitter-timeline" href="https://twitter.com/klingsen" data-widget-id="315908770289041409">Tweets by @@klingsen</a>
+            <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+        </div>
+    </div>
+    <div id="Projects">
+        <h2>Projects</h2>
+        <p>
+            I have a couple of projects "on the side." 
+        </p>
+        <div class="row-fluid">
+            <div class="span4">
+                <h2>NWebsec</h2>
+                <p>
+                    NWebsec is a security library for ASP.NET applications. It can help you 
+                </p>
+                <p><a href="http://nwebsec.codeplex.com">NWebsec on codeplex</a></p>
+            </div>
+            <div class="span4">
+                <h2>Transformtool</h2>
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                <p><a class="btn" href="#">View details &raquo;</a></p>
+            </div>
+            <div class="span4">
+                <h2>Github</h2>
+                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+                <p><a class="btn" href="#">View details &raquo;</a></p>
+            </div>
+        </div>
+    </div>
+    <hr />
+    
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
 </html>
