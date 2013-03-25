@@ -8,6 +8,8 @@ namespace KlingsDotOrg.App_Start
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                 "~/Scripts/jquery-{version}.js"));
+            bundles.Add(new ScriptBundle("~/bundles/analytics").Include(
+                "~/Scripts/Google/analytics.js"));
         }
     }
 }
