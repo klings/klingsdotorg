@@ -150,6 +150,7 @@
     <Content Include="Content\images\glyphicons-halflings.png" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\Google\analytics.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
@@ -166,6 +167,8 @@
     <Content Include="Views\Web.config" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="Views\Home\Research.cshtml" />
+    <Content Include="Views\Home\Projects.cshtml" />
+    <Content Include="Views\Home\Talks.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
